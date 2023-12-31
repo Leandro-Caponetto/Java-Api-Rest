@@ -3,6 +3,9 @@ package com.proyect.persona.controllers;
 import com.proyect.persona.entities.Base;
 import com.proyect.persona.entities.Persona;
 import com.proyect.persona.services.BaseServiceImpl;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
+import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -15,6 +18,10 @@ public abstract class BaseControllerImpl<E extends Base, S extends BaseServiceIm
     @Autowired
     protected S servicio;
 
+    @Operation(description = "Trae todos los Autores de la API", summary = "Return 204 if no data found")
+    @ApiResponses(value = {@ApiResponse(responseCode = "200", description = "Exito"),
+    @ApiResponse(responseCode = "500", description = "Internal error")
+    })
     @GetMapping("")
     public ResponseEntity<?> getAll() {
         try {

@@ -6,6 +6,8 @@ import com.proyect.persona.repositories.PersonaRepository;
 import org.hibernate.envers.Audited;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class PersonaServiceImpl extends BaseServiceImpl<Persona, Long> implements PersonaService {
 
@@ -18,4 +20,14 @@ public class PersonaServiceImpl extends BaseServiceImpl<Persona, Long> implement
     }
 
 
+    @Override
+    public List<Persona> search(String filtro) throws Exception {
+        try {
+            //List<Persona> personas = personaRepository.findByNombreContainingOrApellidoContaining(filtro, filtro);
+            List<Persona> personas = personaRepository.search(filtro);
+            return personas;
+        }catch (Exception e) {
+            throw new Exception(e.getMessage());
+        }
+    }
 }

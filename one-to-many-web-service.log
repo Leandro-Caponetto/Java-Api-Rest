@@ -1,0 +1,219 @@
+2023-12-31T07:01:30.015-03:00  WARN 16740 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=4h23m57s96ms849µs900ns).
+2023-12-31T07:01:36.561-03:00  WARN 16740 --- [parallel-1] d.c.b.a.server.services.IntervalCheck    : Unexpected error in status-check
+
+reactor.core.Exceptions$OverflowException: Could not emit tick 2535 due to lack of requests (interval doesn't support small downstream requests that replenish slower than the ticks)
+	at reactor.core.Exceptions.failWithOverflow(Exceptions.java:249) ~[reactor-core-3.5.13.jar:3.5.13]
+	at reactor.core.publisher.FluxInterval$IntervalRunnable.run(FluxInterval.java:132) ~[reactor-core-3.5.13.jar:3.5.13]
+	at reactor.core.scheduler.PeriodicWorkerTask.call(PeriodicWorkerTask.java:59) ~[reactor-core-3.5.13.jar:3.5.13]
+	at reactor.core.scheduler.PeriodicWorkerTask.run(PeriodicWorkerTask.java:73) ~[reactor-core-3.5.13.jar:3.5.13]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:305) ~[na:na]
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:842) ~[na:na]
+
+2023-12-31T07:01:57.038-03:00  WARN 16740 --- [parallel-2] d.c.b.a.server.services.IntervalCheck    : Unexpected error in info-check
+
+reactor.core.Exceptions$OverflowException: Could not emit tick 424 due to lack of requests (interval doesn't support small downstream requests that replenish slower than the ticks)
+	at reactor.core.Exceptions.failWithOverflow(Exceptions.java:249) ~[reactor-core-3.5.13.jar:3.5.13]
+	at reactor.core.publisher.FluxInterval$IntervalRunnable.run(FluxInterval.java:132) ~[reactor-core-3.5.13.jar:3.5.13]
+	at reactor.core.scheduler.PeriodicWorkerTask.call(PeriodicWorkerTask.java:59) ~[reactor-core-3.5.13.jar:3.5.13]
+	at reactor.core.scheduler.PeriodicWorkerTask.run(PeriodicWorkerTask.java:73) ~[reactor-core-3.5.13.jar:3.5.13]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:305) ~[na:na]
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:842) ~[na:na]
+
+2023-12-31T07:06:50.293-03:00  INFO 27844 --- [main] com.proyect.persona.PersonaApplication   : Starting PersonaApplication using Java 17.0.9 with PID 27844 (C:\Users\contr\OneDrive\Escritorio\proyecto spring-boot y angula\persona\target\classes started by contr in C:\Users\contr\OneDrive\Escritorio\proyecto spring-boot y angula\persona)
+2023-12-31T07:06:50.296-03:00  INFO 27844 --- [main] com.proyect.persona.PersonaApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-12-31T07:06:53.179-03:00  INFO 27844 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-12-31T07:06:53.426-03:00  INFO 27844 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 235 ms. Found 3 JPA repository interfaces.
+2023-12-31T07:06:54.748-03:00  INFO 27844 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9000 (http)
+2023-12-31T07:06:54.763-03:00  INFO 27844 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-12-31T07:06:54.763-03:00  INFO 27844 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.17]
+2023-12-31T07:06:54.894-03:00  INFO 27844 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-12-31T07:06:54.894-03:00  INFO 27844 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4540 ms
+2023-12-31T07:06:55.677-03:00  INFO 27844 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-12-31T07:06:55.776-03:00  INFO 27844 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.17.Final
+2023-12-31T07:06:55.780-03:00  INFO 27844 --- [main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2023-12-31T07:06:55.987-03:00  INFO 27844 --- [main] o.h.e.boot.internal.EnversServiceImpl    : Envers integration enabled? : true
+2023-12-31T07:06:56.214-03:00  INFO 27844 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-12-31T07:06:56.248-03:00  INFO 27844 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-12-31T07:06:56.799-03:00  INFO 27844 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@663622b1
+2023-12-31T07:06:56.801-03:00  INFO 27844 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-12-31T07:06:56.847-03:00  WARN 27844 --- [main] org.hibernate.dialect.Dialect            : HHH000511: The 5.5.0 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 5.7.0. Check the community dialects project for available legacy versions.
+2023-12-31T07:06:56.852-03:00  WARN 27844 --- [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2023-12-31T07:06:57.177-03:00  INFO 27844 --- [main] o.h.e.c.i.m.AuditMetadataGenerator       : Adding properties for entity: com.proyect.persona.entities.Persona
+2023-12-31T07:06:57.180-03:00  INFO 27844 --- [main] o.h.e.c.i.m.AuditMetadataGenerator       : Adding properties for entity: com.proyect.persona.entities.Autor
+2023-12-31T07:06:57.180-03:00  INFO 27844 --- [main] o.h.e.c.i.m.AuditMetadataGenerator       : Adding properties for entity: com.proyect.persona.entities.Localidad
+2023-12-31T07:06:57.180-03:00  INFO 27844 --- [main] o.h.e.c.i.m.AuditMetadataGenerator       : Adding properties for entity: com.proyect.persona.entities.Libro
+2023-12-31T07:06:57.181-03:00  INFO 27844 --- [main] o.h.e.c.i.m.AuditMetadataGenerator       : Adding properties for entity: com.proyect.persona.entities.Domicilio
+2023-12-31T07:06:58.256-03:00  INFO 27844 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2023-12-31T07:06:59.064-03:00  INFO 27844 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-12-31T07:07:00.026-03:00  INFO 27844 --- [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2023-12-31T07:07:00.872-03:00  WARN 27844 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-12-31T07:07:02.024-03:00  INFO 27844 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoint(s) beneath base path '/actuator'
+2023-12-31T07:07:02.125-03:00  INFO 27844 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@153f6a67, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5b3c2e59, org.springframework.security.web.context.SecurityContextHolderFilter@70fdecff, org.springframework.security.web.header.HeaderWriterFilter@43493a5d, org.springframework.security.web.authentication.logout.LogoutFilter@22351330, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@6ec3c680, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@2a153531, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@64a2966a, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@618cfd1, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@22a05923, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1a8b10dd, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@127e838b, org.springframework.security.web.access.ExceptionTranslationFilter@680aa303, org.springframework.security.web.access.intercept.AuthorizationFilter@6bd4d24b]
+2023-12-31T07:07:02.428-03:00  WARN 27844 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2023-12-31T07:07:04.149-03:00  INFO 27844 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9000 (http) with context path ''
+2023-12-31T07:07:04.174-03:00  INFO 27844 --- [main] com.proyect.persona.PersonaApplication   : Started PersonaApplication in 14.446 seconds (process running for 15.785)
+2023-12-31T07:07:15.065-03:00  INFO 27844 --- [http-nio-9000-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-31T07:07:15.065-03:00  INFO 27844 --- [http-nio-9000-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-12-31T07:07:15.067-03:00  INFO 27844 --- [http-nio-9000-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2023-12-31T07:07:17.047-03:00  INFO 27844 --- [http-nio-9000-exec-9] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 1046 ms
+2023-12-31T07:08:32.939-03:00  INFO 27844 --- [http-nio-9000-exec-5] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 385 ms
+2023-12-31T07:10:55.205-03:00  INFO 27844 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-12-31T07:10:55.209-03:00  INFO 27844 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-12-31T07:10:55.218-03:00  INFO 27844 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-12-31T08:16:40.634-03:00  INFO 28892 --- [main] com.proyect.persona.PersonaApplication   : Starting PersonaApplication using Java 17.0.9 with PID 28892 (C:\Users\contr\OneDrive\Escritorio\proyecto spring-boot y angula\persona\target\classes started by contr in C:\Users\contr\OneDrive\Escritorio\proyecto spring-boot y angula\persona)
+2023-12-31T08:16:40.638-03:00  INFO 28892 --- [main] com.proyect.persona.PersonaApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-12-31T08:16:42.880-03:00  INFO 28892 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-12-31T08:16:43.094-03:00  INFO 28892 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 199 ms. Found 3 JPA repository interfaces.
+2023-12-31T08:16:44.650-03:00  INFO 28892 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9000 (http)
+2023-12-31T08:16:44.667-03:00  INFO 28892 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-12-31T08:16:44.668-03:00  INFO 28892 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.17]
+2023-12-31T08:16:44.881-03:00  INFO 28892 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-12-31T08:16:44.882-03:00  INFO 28892 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4132 ms
+2023-12-31T08:16:45.482-03:00  INFO 28892 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-12-31T08:16:45.622-03:00  INFO 28892 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.17.Final
+2023-12-31T08:16:45.625-03:00  INFO 28892 --- [main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2023-12-31T08:16:45.920-03:00  INFO 28892 --- [main] o.h.e.boot.internal.EnversServiceImpl    : Envers integration enabled? : true
+2023-12-31T08:16:46.583-03:00  INFO 28892 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-12-31T08:16:46.613-03:00  INFO 28892 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-12-31T08:16:46.785-03:00  INFO 28892 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1c79d093
+2023-12-31T08:16:46.788-03:00  INFO 28892 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-12-31T08:16:46.853-03:00  WARN 28892 --- [main] org.hibernate.dialect.Dialect            : HHH000511: The 5.5.0 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 5.7.0. Check the community dialects project for available legacy versions.
+2023-12-31T08:16:46.862-03:00  WARN 28892 --- [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2023-12-31T08:16:47.189-03:00  INFO 28892 --- [main] o.h.e.c.i.m.AuditMetadataGenerator       : Adding properties for entity: com.proyect.persona.entities.Persona
+2023-12-31T08:16:47.194-03:00  INFO 28892 --- [main] o.h.e.c.i.m.AuditMetadataGenerator       : Adding properties for entity: com.proyect.persona.entities.Autor
+2023-12-31T08:16:47.194-03:00  INFO 28892 --- [main] o.h.e.c.i.m.AuditMetadataGenerator       : Adding properties for entity: com.proyect.persona.entities.Localidad
+2023-12-31T08:16:47.194-03:00  INFO 28892 --- [main] o.h.e.c.i.m.AuditMetadataGenerator       : Adding properties for entity: com.proyect.persona.entities.Libro
+2023-12-31T08:16:47.195-03:00  INFO 28892 --- [main] o.h.e.c.i.m.AuditMetadataGenerator       : Adding properties for entity: com.proyect.persona.entities.Domicilio
+2023-12-31T08:16:48.049-03:00  INFO 28892 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2023-12-31T08:16:48.255-03:00  INFO 28892 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-12-31T08:16:48.862-03:00  INFO 28892 --- [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2023-12-31T08:16:49.617-03:00  WARN 28892 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-12-31T08:16:50.773-03:00  INFO 28892 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoint(s) beneath base path '/actuator'
+2023-12-31T08:16:50.851-03:00  INFO 28892 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@506d7831, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@497746ea, org.springframework.security.web.context.SecurityContextHolderFilter@5a96081a, org.springframework.security.web.header.HeaderWriterFilter@25eadfe6, org.springframework.security.web.authentication.logout.LogoutFilter@12620e98, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@64a2966a, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@41e35358, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@4f3f8115, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@5b3c2e59, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2e6c69f, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@30e787e2, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3713ebe9, org.springframework.security.web.access.ExceptionTranslationFilter@22a05923, org.springframework.security.web.access.intercept.AuthorizationFilter@1741afaf]
+2023-12-31T08:16:51.185-03:00  WARN 28892 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2023-12-31T08:16:52.248-03:00  INFO 28892 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9000 (http) with context path ''
+2023-12-31T08:16:52.270-03:00  INFO 28892 --- [main] com.proyect.persona.PersonaApplication   : Started PersonaApplication in 12.251 seconds (process running for 12.92)
+2023-12-31T08:17:02.634-03:00  INFO 28892 --- [http-nio-9000-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-31T08:17:02.635-03:00  INFO 28892 --- [http-nio-9000-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-12-31T08:17:02.640-03:00  INFO 28892 --- [http-nio-9000-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
+2023-12-31T08:17:04.083-03:00  INFO 28892 --- [http-nio-9000-exec-3] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 842 ms
+2023-12-31T08:44:14.196-03:00  INFO 28892 --- [http-nio-9000-exec-1] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 649 ms
+2023-12-31T15:16:30.445-03:00  INFO 30584 --- [main] com.proyect.persona.PersonaApplication   : Starting PersonaApplication using Java 17.0.9 with PID 30584 (C:\Users\contr\OneDrive\Escritorio\proyecto spring-boot y angula\persona\target\classes started by contr in C:\Users\contr\OneDrive\Escritorio\proyecto spring-boot y angula\persona)
+2023-12-31T15:16:30.453-03:00  INFO 30584 --- [main] com.proyect.persona.PersonaApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-12-31T15:16:35.290-03:00  INFO 30584 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-12-31T15:16:36.071-03:00  INFO 30584 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 708 ms. Found 3 JPA repository interfaces.
+2023-12-31T15:16:40.014-03:00  INFO 30584 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9000 (http)
+2023-12-31T15:16:40.179-03:00  INFO 30584 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-12-31T15:16:40.181-03:00  INFO 30584 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.17]
+2023-12-31T15:16:41.213-03:00  INFO 30584 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-12-31T15:16:41.214-03:00  INFO 30584 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 10575 ms
+2023-12-31T15:16:42.062-03:00  INFO 30584 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-12-31T15:16:42.275-03:00  INFO 30584 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.17.Final
+2023-12-31T15:16:42.279-03:00  INFO 30584 --- [main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2023-12-31T15:16:42.563-03:00  INFO 30584 --- [main] o.h.e.boot.internal.EnversServiceImpl    : Envers integration enabled? : true
+2023-12-31T15:16:42.917-03:00  INFO 30584 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-12-31T15:16:42.969-03:00  INFO 30584 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-12-31T15:16:43.293-03:00  INFO 30584 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@75c77add
+2023-12-31T15:16:43.297-03:00  INFO 30584 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-12-31T15:16:43.366-03:00  WARN 30584 --- [main] org.hibernate.dialect.Dialect            : HHH000511: The 5.5.0 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 5.7.0. Check the community dialects project for available legacy versions.
+2023-12-31T15:16:43.376-03:00  WARN 30584 --- [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2023-12-31T15:16:44.208-03:00  INFO 30584 --- [main] o.h.e.c.i.m.AuditMetadataGenerator       : Adding properties for entity: com.proyect.persona.entities.Persona
+2023-12-31T15:16:44.218-03:00  INFO 30584 --- [main] o.h.e.c.i.m.AuditMetadataGenerator       : Adding properties for entity: com.proyect.persona.entities.Autor
+2023-12-31T15:16:44.218-03:00  INFO 30584 --- [main] o.h.e.c.i.m.AuditMetadataGenerator       : Adding properties for entity: com.proyect.persona.entities.Localidad
+2023-12-31T15:16:44.219-03:00  INFO 30584 --- [main] o.h.e.c.i.m.AuditMetadataGenerator       : Adding properties for entity: com.proyect.persona.entities.Libro
+2023-12-31T15:16:44.219-03:00  INFO 30584 --- [main] o.h.e.c.i.m.AuditMetadataGenerator       : Adding properties for entity: com.proyect.persona.entities.Domicilio
+2023-12-31T15:16:45.819-03:00  INFO 30584 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2023-12-31T15:16:46.186-03:00  INFO 30584 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-12-31T15:16:47.411-03:00  INFO 30584 --- [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2023-12-31T15:16:48.892-03:00  WARN 30584 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-12-31T15:16:51.012-03:00  INFO 30584 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoint(s) beneath base path '/actuator'
+2023-12-31T15:16:51.233-03:00  INFO 30584 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@1490b1a4, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@28908c04, org.springframework.security.web.context.SecurityContextHolderFilter@22351330, org.springframework.security.web.header.HeaderWriterFilter@75eed00f, org.springframework.security.web.authentication.logout.LogoutFilter@153f6a67, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@38794a3, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@78c7d992, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@2b9132ad, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@78835956, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@72238cf0, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7d8fcde8, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7adc8212, org.springframework.security.web.access.ExceptionTranslationFilter@39badc71, org.springframework.security.web.access.intercept.AuthorizationFilter@4df4f611]
+2023-12-31T15:16:51.609-03:00  WARN 30584 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2023-12-31T15:16:52.918-03:00  INFO 30584 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9000 (http) with context path ''
+2023-12-31T15:16:52.942-03:00  INFO 30584 --- [main] com.proyect.persona.PersonaApplication   : Started PersonaApplication in 23.711 seconds (process running for 24.902)
+2023-12-31T15:16:53.188-03:00  INFO 30584 --- [http-nio-9000-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-31T15:16:53.189-03:00  INFO 30584 --- [http-nio-9000-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-12-31T15:16:53.191-03:00  INFO 30584 --- [http-nio-9000-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2023-12-31T15:18:55.307-03:00  INFO 30584 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-12-31T15:18:55.311-03:00  INFO 30584 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-12-31T15:18:55.343-03:00  INFO 30584 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-12-31T15:18:57.911-03:00  INFO 30716 --- [main] com.proyect.persona.PersonaApplication   : Starting PersonaApplication using Java 17.0.9 with PID 30716 (C:\Users\contr\OneDrive\Escritorio\proyecto spring-boot y angula\persona\target\classes started by contr in C:\Users\contr\OneDrive\Escritorio\proyecto spring-boot y angula\persona)
+2023-12-31T15:18:57.915-03:00  INFO 30716 --- [main] com.proyect.persona.PersonaApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-12-31T15:18:59.994-03:00  INFO 30716 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-12-31T15:19:00.252-03:00  INFO 30716 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 243 ms. Found 3 JPA repository interfaces.
+2023-12-31T15:19:01.285-03:00  INFO 30716 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9000 (http)
+2023-12-31T15:19:01.302-03:00  INFO 30716 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-12-31T15:19:01.302-03:00  INFO 30716 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.17]
+2023-12-31T15:19:01.567-03:00  INFO 30716 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-12-31T15:19:01.568-03:00  INFO 30716 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3557 ms
+2023-12-31T15:19:02.025-03:00  INFO 30716 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-12-31T15:19:02.144-03:00  INFO 30716 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.17.Final
+2023-12-31T15:19:02.149-03:00  INFO 30716 --- [main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2023-12-31T15:19:02.385-03:00  INFO 30716 --- [main] o.h.e.boot.internal.EnversServiceImpl    : Envers integration enabled? : true
+2023-12-31T15:19:02.630-03:00  INFO 30716 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-12-31T15:19:02.677-03:00  INFO 30716 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-12-31T15:19:02.879-03:00  INFO 30716 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@10fc1a22
+2023-12-31T15:19:02.881-03:00  INFO 30716 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-12-31T15:19:02.940-03:00  WARN 30716 --- [main] org.hibernate.dialect.Dialect            : HHH000511: The 5.5.0 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 5.7.0. Check the community dialects project for available legacy versions.
+2023-12-31T15:19:02.948-03:00  WARN 30716 --- [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2023-12-31T15:19:03.346-03:00  INFO 30716 --- [main] o.h.e.c.i.m.AuditMetadataGenerator       : Adding properties for entity: com.proyect.persona.entities.Persona
+2023-12-31T15:19:03.350-03:00  INFO 30716 --- [main] o.h.e.c.i.m.AuditMetadataGenerator       : Adding properties for entity: com.proyect.persona.entities.Autor
+2023-12-31T15:19:03.351-03:00  INFO 30716 --- [main] o.h.e.c.i.m.AuditMetadataGenerator       : Adding properties for entity: com.proyect.persona.entities.Localidad
+2023-12-31T15:19:03.351-03:00  INFO 30716 --- [main] o.h.e.c.i.m.AuditMetadataGenerator       : Adding properties for entity: com.proyect.persona.entities.Libro
+2023-12-31T15:19:03.352-03:00  INFO 30716 --- [main] o.h.e.c.i.m.AuditMetadataGenerator       : Adding properties for entity: com.proyect.persona.entities.Domicilio
+2023-12-31T15:19:04.185-03:00  INFO 30716 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2023-12-31T15:19:04.401-03:00  INFO 30716 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-12-31T15:19:04.883-03:00  INFO 30716 --- [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2023-12-31T15:19:05.356-03:00  WARN 30716 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-12-31T15:19:06.479-03:00  INFO 30716 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoint(s) beneath base path '/actuator'
+2023-12-31T15:19:06.584-03:00  INFO 30716 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@d0c35a8, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6fcd767a, org.springframework.security.web.context.SecurityContextHolderFilter@2d198533, org.springframework.security.web.header.HeaderWriterFilter@78c7d992, org.springframework.security.web.authentication.logout.LogoutFilter@64d711b0, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@3564caf8, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@5cb7eb6c, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@78a3a272, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@104861ff, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5e1fc897, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7f62fa28, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7d5ef93e, org.springframework.security.web.access.ExceptionTranslationFilter@79b07ccd, org.springframework.security.web.access.intercept.AuthorizationFilter@1490b1a4]
+2023-12-31T15:19:06.871-03:00  WARN 30716 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2023-12-31T15:19:07.880-03:00  INFO 30716 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9000 (http) with context path ''
+2023-12-31T15:19:07.909-03:00  INFO 30716 --- [main] com.proyect.persona.PersonaApplication   : Started PersonaApplication in 10.557 seconds (process running for 11.165)
+2023-12-31T15:25:12.825-03:00  INFO 30716 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-12-31T15:25:12.850-03:00  INFO 30716 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-12-31T15:25:12.876-03:00  INFO 30716 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-12-31T15:25:16.465-03:00  INFO 30568 --- [main] com.proyect.persona.PersonaApplication   : Starting PersonaApplication using Java 17.0.9 with PID 30568 (C:\Users\contr\OneDrive\Escritorio\proyecto spring-boot y angula\persona\target\classes started by contr in C:\Users\contr\OneDrive\Escritorio\proyecto spring-boot y angula\persona)
+2023-12-31T15:25:16.469-03:00  INFO 30568 --- [main] com.proyect.persona.PersonaApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-12-31T15:25:18.678-03:00  INFO 30568 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-12-31T15:25:18.911-03:00  INFO 30568 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 217 ms. Found 3 JPA repository interfaces.
+2023-12-31T15:25:20.264-03:00  INFO 30568 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9000 (http)
+2023-12-31T15:25:20.285-03:00  INFO 30568 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-12-31T15:25:20.285-03:00  INFO 30568 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.17]
+2023-12-31T15:25:20.439-03:00  INFO 30568 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-12-31T15:25:20.439-03:00  INFO 30568 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3895 ms
+2023-12-31T15:25:20.987-03:00  INFO 30568 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-12-31T15:25:21.104-03:00  INFO 30568 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.17.Final
+2023-12-31T15:25:21.107-03:00  INFO 30568 --- [main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2023-12-31T15:25:21.349-03:00  INFO 30568 --- [main] o.h.e.boot.internal.EnversServiceImpl    : Envers integration enabled? : true
+2023-12-31T15:25:21.586-03:00  INFO 30568 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-12-31T15:25:21.714-03:00  INFO 30568 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-12-31T15:25:21.894-03:00  INFO 30568 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1b7a4930
+2023-12-31T15:25:21.897-03:00  INFO 30568 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-12-31T15:25:21.955-03:00  WARN 30568 --- [main] org.hibernate.dialect.Dialect            : HHH000511: The 5.5.0 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 5.7.0. Check the community dialects project for available legacy versions.
+2023-12-31T15:25:21.960-03:00  WARN 30568 --- [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2023-12-31T15:25:22.427-03:00  INFO 30568 --- [main] o.h.e.c.i.m.AuditMetadataGenerator       : Adding properties for entity: com.proyect.persona.entities.Persona
+2023-12-31T15:25:22.431-03:00  INFO 30568 --- [main] o.h.e.c.i.m.AuditMetadataGenerator       : Adding properties for entity: com.proyect.persona.entities.Autor
+2023-12-31T15:25:22.431-03:00  INFO 30568 --- [main] o.h.e.c.i.m.AuditMetadataGenerator       : Adding properties for entity: com.proyect.persona.entities.Localidad
+2023-12-31T15:25:22.432-03:00  INFO 30568 --- [main] o.h.e.c.i.m.AuditMetadataGenerator       : Adding properties for entity: com.proyect.persona.entities.Libro
+2023-12-31T15:25:22.432-03:00  INFO 30568 --- [main] o.h.e.c.i.m.AuditMetadataGenerator       : Adding properties for entity: com.proyect.persona.entities.Domicilio
+2023-12-31T15:25:23.359-03:00  INFO 30568 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2023-12-31T15:25:23.567-03:00  INFO 30568 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-12-31T15:25:24.224-03:00  INFO 30568 --- [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2023-12-31T15:25:24.806-03:00  WARN 30568 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-12-31T15:25:26.221-03:00  INFO 30568 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoint(s) beneath base path '/actuator'
+2023-12-31T15:25:26.382-03:00  INFO 30568 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@ce15aa, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3dabf112, org.springframework.security.web.context.SecurityContextHolderFilter@7ad31e9e, org.springframework.security.web.header.HeaderWriterFilter@12620e98, org.springframework.security.web.authentication.logout.LogoutFilter@3713ebe9, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@470c40be, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@15f4f652, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@6e3f38c1, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@6b50017c, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@35f011cf, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5e1fc897, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7d9f0cf4, org.springframework.security.web.access.ExceptionTranslationFilter@13258770, org.springframework.security.web.access.intercept.AuthorizationFilter@5c00b341]
+2023-12-31T15:25:26.630-03:00  WARN 30568 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2023-12-31T15:25:27.646-03:00  INFO 30568 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9000 (http) with context path ''
+2023-12-31T15:25:27.665-03:00  INFO 30568 --- [main] com.proyect.persona.PersonaApplication   : Started PersonaApplication in 12.181 seconds (process running for 12.947)
+2023-12-31T15:29:17.206-03:00  INFO 30568 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-12-31T15:29:17.228-03:00  INFO 30568 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-12-31T15:29:17.251-03:00  INFO 30568 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
